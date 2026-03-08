@@ -17,7 +17,7 @@ The `Table` component is a flexible and customizable table designed for displayi
 
 To use the `<Table>` component, pass the required `data`, `columns`, and `paginationOptions` as props. Additionally, you can use props like `striped`, `bordered`, and others to customize its appearance, as inherited from the [Trussworks Table component](https://trussworks.github.io/react-uswds/?path=/docs/components-table--docs).
 
-For a practical implementation, refer to the [Simple Table Example](https://github.com/NMFS-RADFish/boilerplate/blob/main/examples/simple-table/README.md).
+For a practical implementation, refer to the [Simple Table Example](https://github.com/NMFS-ocio/boilerplate/blob/main/examples/simple-table/README.md).
 
 ## Props
 
