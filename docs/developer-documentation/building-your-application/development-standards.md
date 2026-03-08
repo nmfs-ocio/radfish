@@ -51,7 +51,7 @@ Branding creates a distinct identity for a product or application. It defines an
 
 You might have noticed that the components above do not have any `className` assigned. You may be wondering how to style that component. There are a few things to keep in mind when styling components:
 
-- Each component in `react-radfish` has it’s own scoped CSS file. This file modifies the existing `@trussworks` CSS to inject NOAA styles. This file should not be touched. If you notice a bug or issue, please consider [contributing to the project](https://nmfs-radfish.github.io/radfish/about/contribute).
+- Each component in `react-radfish` has it’s own scoped CSS file. This file modifies the existing `@trussworks` CSS to inject NOAA styles. This file should not be touched. If you notice a bug or issue, please consider [contributing to the project](https://nmfs-ocio.github.io/radfish/about/contribute).
 - You can modify the general theme of these components in the `styles/theme.css` file. You can change things like color variables, font-family, and line-height here. They will be propagated throughout the application, as well as throughout `react-radfish`. RADFish uses CSS variables, like this:
 
 ```css

@@ -120,7 +120,7 @@ By following this format, your feature request will be clear, actionable, and ea
 
 ## 5\. Other Contributions
 
-If you would like to contribute in other ways (e.g., translations, community management, testing), we are always open to discussing how you can help\! Visit our [Community](https://nmfs-radfish.github.io/radfish/about/commmunity) page to learn how to join.
+If you would like to contribute in other ways (e.g., translations, community management, testing), we are always open to discussing how you can help\! Visit our [Community](https://nmfs-ocio.github.io/radfish/about/commmunity) page to learn how to join.
 
 ## 6\. How to Make a Pull Request
 
@@ -149,7 +149,7 @@ You can view our [Project Roadmap on GitHub](https://github.com/orgs/NMFS-RADFis
 
 ## 9\. Code of Conduct
 
-We ask that all contributors adhere to our [Community Conduct](https://nmfs-radfish.github.io/radfish/about/commmunity). This ensures we maintain a safe, productive, and inclusive environment for everyone.
+We ask that all contributors adhere to our [Community Conduct](https://nmfs-ocio.github.io/radfish/about/commmunity). This ensures we maintain a safe, productive, and inclusive environment for everyone.
 
 ## 10\. Licenses and Attribution
 

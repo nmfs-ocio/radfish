@@ -21,4 +21,4 @@ A well-maintained project roadmap for RADFish is important for several reasons:
 
 The roadmap is an evolving document. It's constantly updated as new contributions come in and priorities shift. By contributing, you help make RADFish a useful framework that meets NOAA Fisheries' evolving needs for web development.
 
-To learn how to contribute, refer to our [Contribution Guidelines](https://nmfs-radfish.github.io/radfish/about/contribute).
+To learn how to contribute, refer to our [Contribution Guidelines](https://nmfs-ocio.github.io/radfish/about/contribute).

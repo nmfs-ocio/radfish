@@ -12,5 +12,5 @@ Modern users expect apps to be responsive and reliable, even with limited intern
 
 Designing apps for these users present unique challenges. To meet these challenges, RADFish developers should be familiar with several concepts:
 
-* [Offline-First](https://nmfs-radfish.github.io/radfish/developer-documentation/concepts/offline-first) design prioritizes functionality even without internet connectivity. 
-* [On-Device Storage](https://nmfs-radfish.github.io/radfish/developer-documentation/concepts/on-device-storage) is storing data directly on a user's device, without relying on internet connectivity. 
+* [Offline-First](https://nmfs-ocio.github.io/radfish/developer-documentation/concepts/offline-first) design prioritizes functionality even without internet connectivity. 
+* [On-Device Storage](https://nmfs-ocio.github.io/radfish/developer-documentation/concepts/on-device-storage) is storing data directly on a user's device, without relying on internet connectivity. 

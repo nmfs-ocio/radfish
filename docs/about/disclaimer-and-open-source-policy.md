@@ -60,7 +60,7 @@ To ensure optimal performance, we recommend using the latest versions of the mos
 
 ## 7\. Community and Contribution Guidelines
 
-We encourage everyone to participate in RADFish’s development by reviewing our [Contribution Guidelines](https://nmfs-radfish.github.io/radfish/about/contribute). You can contribute by submitting bug reports, feature requests, or improving documentation. We ask all contributors to follow our [Code of Conduct](https://nmfs-radfish.github.io/radfish/about/commmunity) to maintain a respectful and collaborative environment.
+We encourage everyone to participate in RADFish’s development by reviewing our [Contribution Guidelines](https://nmfs-ocio.github.io/radfish/about/contribute). You can contribute by submitting bug reports, feature requests, or improving documentation. We ask all contributors to follow our [Code of Conduct](https://nmfs-ocio.github.io/radfish/about/commmunity) to maintain a respectful and collaborative environment.
 
 ## 8\. Contact Us
 

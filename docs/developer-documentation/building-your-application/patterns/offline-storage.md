@@ -168,4 +168,4 @@ export default App;
 
 You are free to use any network library of your choice to handle HTTP requests (GET, POST, PUT, DELETE). For your convenience, we’ve provided examples using the native fetch API. You can adapt these examples to the library that best fits your needs.
 
-Refer to the [Integrating with Backend Services](https://nmfs-radfish.github.io/radfish/developer-documentation/building-your-application/patterns/apiservice) documentation for examples.
+Refer to the [Integrating with Backend Services](https://nmfs-ocio.github.io/radfish/developer-documentation/building-your-application/patterns/apiservice) documentation for examples.

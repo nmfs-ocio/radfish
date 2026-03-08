@@ -145,7 +145,7 @@ You can view our [Project Roadmap](https://github.com/orgs/NMFS-RADFish/projects
 
 ## 9\. Code of Conduct
 
-We ask that all contributors adhere to our [Community Conduct](https://nmfs-radfish.github.io/radfish/about/commmunity). This ensures we maintain a safe, productive, and inclusive environment for everyone.
+We ask that all contributors adhere to our [Community Conduct](https://nmfs-ocio.github.io/radfish/about/commmunity). This ensures we maintain a safe, productive, and inclusive environment for everyone.
 
 ## 10\. Licenses and Attribution
 

@@ -10,7 +10,7 @@ We're building an active open-source community of NOAA Fisheries and our partner
 
 The RADFish community is vital to the framework’s success. We'll work together to create standardized, modular, and reusable web components for fisheries electronic reporting. We invite contributors from across NOAA Fisheries and our partners to join the conversation, share their expertise, and collaborate on solving common challenges.
 
-Explore RADFish on GitHub for access to the codebase, documentation, and issue tracking. Refer to our [Contribution Guidelines](https://nmfs-radfish.github.io/radfish/about/contribute) to actively participate in the project
+Explore RADFish on GitHub for access to the codebase, documentation, and issue tracking. Refer to our [Contribution Guidelines](https://nmfs-ocio.github.io/radfish/about/contribute) to actively participate in the project
 
 Having trouble? Email [joshua.lee@noaa.gov](mailto:joshua.lee@noaa.gov) with Join the “RADFish Community” in the subject line.
 
