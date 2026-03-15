@@ -86,7 +86,7 @@ Our documentation is essential to help new users and contributors understand the
 
 We value your input and welcome ideas that could improve our product\! To ensure your feature request gets the attention it deserves, please follow the steps below. Detailed information helps us assess, prioritize, and potentially implement your idea faster.
 
-- Search through the [Project Roadmap](https://github.com/orgs/NMFS-RADFish/projects/2/views/3) or the [Issues Log](https://github.com/NMFS-ocio/boilerplate/issues) to make sure the feature hasn’t already been requested.
+- Search through the [Project Roadmap](https://github.com/orgs/nmfs-ocio/projects/1/views/3) or the [Issues Log](https://github.com/NMFS-ocio/boilerplate/issues) to make sure the feature hasn’t already been requested.
 - If it's a new feature, create a new issue using our **Feature Request Template**.
 - Provide as much detail as possible to describe the feature.
 
@@ -126,7 +126,7 @@ If you would like to contribute in other ways (e.g., translations, community man
 
 If you want to propose a code change, here's how to submit a pull request:
 
-1. First, make sure there is an issue that describes the problem you are solving. Search the [Project Roadmap](https://github.com/orgs/NMFS-RADFish/projects/2/views/3) to find an existing issue. If none exists, create your own bug report or feature request.
+1. First, make sure there is an issue that describes the problem you are solving. Search the [Project Roadmap](https://github.com/orgs/nmfs-ocio/projects/1/views/3) to find an existing issue. If none exists, create your own bug report or feature request.
 2. Fork the relevant repo into your GitHub account.
 3. Create a branch from directly from your issue submission. Use this branch to do your development.
 4. When your code changes are ready for review, open a pull request. Be sure to fill out all the applicable fields in the generated PR description.
@@ -145,7 +145,7 @@ We review bug reports and feature requests regularly. You can track progress by 
 
 ## 8\. Project Roadmap
 
-You can view our [Project Roadmap on GitHub](https://github.com/orgs/NMFS-RADFish/projects/2/views/3). The roadmap outlines our upcoming priorities and major features. It shows what we're working on next.
+You can view our [Project Roadmap on GitHub](https://github.com/orgs/nmfs-ocio/projects/1/views/3). The roadmap outlines our upcoming priorities and major features. It shows what we're working on next.
 
 ## 9\. Code of Conduct
 
