@@ -12,7 +12,7 @@ Each exammple is scoped to teach developers how to implement core pieces of func
 
 These examples are meant to be a reference for any RADFish project. These examples can serve as a starting point to build out a new RADFish application. However, we recommend starting with a fresh `react-javascript` template.
 
-The source code for each example is in the open source repo for RADFish [boilerplate](https://github.com/nmfs-ocio/radfish-monorepo/tree/main/examples). Each example can be cloned and run separately as you are working with each from the RADFish CLI. To learn how to run these scripts, refer to the [running examples](./building-your-application/available-scripts/running-example) section.
+The source code for each example is in the open source repo for [radfish-monorepo boilerplate](https://github.com/nmfs-ocio/radfish-monorepo/tree/main/examples). Each example can be cloned and run separately as you are working with each from the RADFish CLI. To learn how to run these scripts, refer to the [running examples](./building-your-application/available-scripts/running-example) section.
 
 ### List of Examples
 Here's a list of pre-built examples that you can use as a starting point for your application. These examples are scoped to one core feature.

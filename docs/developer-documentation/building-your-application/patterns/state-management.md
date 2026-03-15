@@ -103,7 +103,7 @@ This will register the React application as a PWA, which can be downloaded from 
 
 Additionally, you can query for whether or not the RADFish application is online or offline by leveraging the [navigator API](https://developer.mozilla.org/en-US/docs/Web/API/Navigator).
 
-> Note: This service worker is preconfigured when using the boilerplate `react-javascript` template.
+> Note: This service worker is preconfigured when using the radfish-monorepo `react-javascript` template.
 
 It is up to the developer on how or where this API needs to be used. It's a good idea to use it early on in your application, so that the rest of the application can listen for changes in offline state. The `@nmfs-radfish/react-radfish` package exposes a `useOfflineStatus` hook that gives you a simple way to tap into whether or not your application is online:
 

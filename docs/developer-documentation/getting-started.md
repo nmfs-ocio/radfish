@@ -38,9 +38,9 @@ cd my-app
 npm start
 ```
 
-### Option 3: Clone the boilerplate repository to access all examples
+### Option 3: Clone the radfish-monorepo to access all examples
 
-To get all the examples, clone the [boilerplate repository](https://github.com/nmfs-ocio/radfish-monorepo):
+To get all the examples, clone the [radfish-monorepo](https://github.com/nmfs-ocio/radfish-monorepo):
 
 ```bash
 git clone https://github.com/nmfs-ocio/radfish-monorepo.git
@@ -49,7 +49,7 @@ git clone https://github.com/nmfs-ocio/radfish-monorepo.git
 Then navigate to the example you want to run and start the app:
 
 ```bash
-cd boilerplate/examples/[example you want to run]
+cd radfish-monorepo/examples/[example you want to run]
 npm install
 npm start
 ```
