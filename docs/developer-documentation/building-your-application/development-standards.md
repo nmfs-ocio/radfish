@@ -9,7 +9,7 @@ description: USWDS, NOAA branding and Styling, and 508 compliance
 
 The U.S. Web Design System (USWDS) is a set of design and development principles and guidelines. It helps deveolpers create standardized, accessible, consistent, and user-friendly websites and applications. It helps developers adhere to 508 compliance guidelines.
 
-In most cases, RADFish uses standard components from the [`react-uswds`](https://github.com/trussworks/react-uswds) open source project. The RADFish project further extends the react-uswds library. These components maintain the functionality of react-uswds, but are branded with NOAA themes and styles. These components live in the [`react-radfish` directory](https://github.com/NMFS-RADFish/react-components). This allows modern React development with NOAA look and feel.
+In most cases, RADFish uses standard components from the [`react-uswds`](https://github.com/trussworks/react-uswds) open source project. The RADFish project further extends the react-uswds library. These components maintain the functionality of react-uswds, but are branded with NOAA themes and styles. To learn more about these extended components and how to use them, visit the [Custom Components](https://nmfs-ocio.github.io/radfish/design-system/custom-components) documentation. This allows modern React development with NOAA look and feel.
 
 For information on the full `react-uswds` library, refer to their [storybook](https://trussworks.github.io/react-uswds/?path=/docs/welcome--docs).
 
