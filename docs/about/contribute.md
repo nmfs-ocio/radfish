@@ -16,7 +16,7 @@ If you encounter any bugs, glitches, or unexpected behavior while using our soft
 
 ### How to Report a Bug:
 
-- Search through the [Project Roadmap](https://github.com/orgs/nmfs-ocio/projects/1) or the [Issues Log](https://github.com/NMFS-ocio/boilerplate/issues) to make sure the bug hasn’t already been reported.
+- Search through the [Project Roadmap](https://github.com/orgs/nmfs-ocio/projects/1) or the [Issues Log](https://github.com/nmfs-ocio/boilerplate/issues) to make sure the bug hasn’t already been reported.
 - If it's a new bug, create a new issue using our **Bug Report Template**.
 - Provide as much detail as possible, including the steps to reproduce the bug, the version of the software, and any error messages.
 
@@ -79,14 +79,14 @@ Our documentation is essential to help new users and contributors understand the
 ### Help us Improve the Documentation:
 
 - If you find a section that is unclear or incomplete, feel free to submit a pull request with your improvements.
-- If you’re unsure how to improve the documentation, \[open an issue\](https://github.com/NMFS-ocio/boilerplate/issues) and describe what is missing or unclear.
+- If you’re unsure how to improve the documentation, \[open an issue\](https://github.com/nmfs-ocio/boilerplate/issues) and describe what is missing or unclear.
 - Examples and tutorials are especially valuable\! If you've used the project and created your own examples, we would love to add them to our examples library.
 
 ## 4\. Feature Requests
 
 We value your input and welcome ideas that could improve our product\! To ensure your feature request gets the attention it deserves, please follow the steps below. Detailed information helps us assess, prioritize, and potentially implement your idea faster.
 
-- Search through the [Project Roadmap](https://github.com/orgs/nmfs-ocio/projects/1/views/3) or the [Issues Log](https://github.com/NMFS-ocio/boilerplate/issues) to make sure the feature hasn’t already been requested.
+- Search through the [Project Roadmap](https://github.com/orgs/nmfs-ocio/projects/1/views/3) or the [Issues Log](https://github.com/nmfs-ocio/boilerplate/issues) to make sure the feature hasn’t already been requested.
 - If it's a new feature, create a new issue using our **Feature Request Template**.
 - Provide as much detail as possible to describe the feature.
 
@@ -155,4 +155,4 @@ We ask that all contributors adhere to our [Community Conduct](https://nmfs-ocio
 
 This project is licensed under the [Apache License](https://opensource.org/license/apache-2-0/), Version 2.0. Please make sure that any contributions comply with this license. If you are submitting code or other contributions, you are agreeing to license your contributions under this same license.
 
-For external libraries or code used in the project, we provide attribution as necessary. If you believe an attribution is missing, please [open an issue](https://github.com/NMFS-ocio/boilerplate/issues).
+For external libraries or code used in the project, we provide attribution as necessary. If you believe an attribution is missing, please [open an issue](https://github.com/nmfs-ocio/boilerplate/issues).

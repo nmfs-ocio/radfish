@@ -26,7 +26,7 @@ As an open-source project, RADFish is committed to transparency and collaboratio
 Contributors to the RADFish project should follow our Open Source Policy:
 
 - This project is licensed under the [Apache License](https://opensource.org/license/apache-2-0/), Version 2.0. Please make sure that any contributions comply with this license. If you are submitting code or other contributions, you are agreeing to license your contributions under this same license.
-- For external libraries or code used in the project, we provide attribution as necessary. If you believe an attribution is missing, please [open an issue](https://github.com/NMFS-ocio/boilerplate/issues).
+- For external libraries or code used in the project, we provide attribution as necessary. If you believe an attribution is missing, please [open an issue](https://github.com/nmfs-ocio/boilerplate/issues).
 - We leverage open-source tools and libraries where appropriate to meet NOAA Fisheries' needs for efficient and scalable web applications.
 - Code developed by NOAA Fisheries staff is by default in the public domain. However, modifications of third-party open-source libraries are considered “joint works” and are released under the terms of the original license.
 
