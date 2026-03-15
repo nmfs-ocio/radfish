@@ -151,4 +151,4 @@ We ask that all contributors adhere to our [Community Conduct](https://nmfs-ocio
 
 This project is licensed under the [Apache License](https://opensource.org/license/apache-2-0/), Version 2.0. Please make sure that any contributions comply with this license. If you are submitting code or other contributions, you are agreeing to license your contributions under this same license.
 
-For external libraries or code used in the project, we provide attribution as necessary. If you believe an attribution is missing, please [open and issue](https://github.com/nmfs-ocio/boilerplate/issues).
+For external libraries or code used in the project, we provide attribution as necessary. If you believe an attribution is missing, please [open and issue](https://github.com/nmfs-ocio/radfish-monorepo/issues).
