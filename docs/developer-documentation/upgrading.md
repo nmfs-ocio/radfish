@@ -15,7 +15,7 @@ Updating your RADFish version ensures stability, security, and the latest featur
         npm update
         ```
 
-        This will update both `@nmfs-radfish/radfish` and `@nmfs-radfish/react-radfish` along with their dependencies to the latest compatible versions.
+        This will update both `@nmfs-ocio/radfish` and `@nmfs-ocio/react-radfish` along with their dependencies to the latest compatible versions.
 
     2. **Check for Changes:**  After running the update, you should verify that everything is working as expected. It's a good practice to run your test suite to catch any potential issues:
         ```bash
@@ -49,10 +49,10 @@ Updating your RADFish version ensures stability, security, and the latest featur
 ### 3. Overview of Packages Managed in `radfish` and `react-radfish`
 
 In your RADFish project, these packages are managed and should be kept up to date:
-- `@nmfs-radfish/radfish`
-- `@nmfs-radfish/react-radfish`
+- `@nmfs-ocio/radfish`
+- `@nmfs-ocio/react-radfish`
 
-#### `@nmfs-radfish/radfish`
+#### `@nmfs-ocio/radfish`
 This package handles the core logic and utilities for RADFish. It manages several dependencies that are essential for the functionality of the RADFish system:
 
    - **Dependencies:**
@@ -60,7 +60,7 @@ This package handles the core logic and utilities for RADFish. It manages severa
         - `msw`: A library for mocking API requests in development and testing environments.
         - `react`: The core React library required for building user interfaces in RADFish projects.
 
-#### `@nmfs-radfish/react-radfish`
+#### `@nmfs-ocio/react-radfish`
 
    This package provides UI components for React applications using RADFish. It manages several dependencies that enhance the user interface and functionality:
 

@@ -24,7 +24,7 @@ Import the following libraries in the `App.jsx` file:
 
 ```jsx
 import React, { useEffect } from "react";
-import { useOfflineStatus } from "@nmfs-radfish/react-radfish";
+import { useOfflineStatus } from "@nmfs-ocio/react-radfish";
 import { Alert } from "@trussworks/react-uswds";
 ```
 

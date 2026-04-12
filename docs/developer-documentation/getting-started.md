@@ -21,7 +21,7 @@ Before you start, make sure you have the following installed:
 Start your app with a barebones and pre-configured [template](./examples-and-templates#templates).
 
 ```bash
-npx @nmfs-radfish/create-radfish-app my-app
+npx @nmfs-ocio/create-radfish-app my-app
 cd my-app
 npm start
 ```
@@ -33,7 +33,7 @@ Once the development server starts, visit http://localhost:3000/ in your browser
 Select an [example](/radfish/developer-documentation/examples-and-templates) and run [the command](./building-your-application/available-scripts/running-example.md) using the `--example` tag.
 
 ```bash
-npx @nmfs-radfish/create-radfish-app my-app --example multistep-form
+npx @nmfs-ocio/create-radfish-app my-app --example multistep-form
 cd my-app
 npm start
 ```
@@ -61,7 +61,7 @@ Once the development server starts, visit http://localhost:3000/ in your browser
 The `--help` flag is a common option that displays helpful information about a command or script, including available options and usage instructions.
 
 ```bash
-npx @nmfs-radfish/create-radfish-app --help
+npx @nmfs-ocio/create-radfish-app --help
 ```
 
 ### Upgrading package versions in your app

@@ -37,11 +37,11 @@ Templates come pre-configured with everything to start coding your new project r
 
 Creating a new project based on a template is similar to running an example. If you want to create a new project from the `react-javascript` library, execute this RADFish CLI command:
 
- `npx @nmfs-radfish/create-radfish-app my-app --template react-javascript`
+ `npx @nmfs-ocio/create-radfish-app my-app --template react-javascript`
 
 This will create a new RADFish project named `my-app` in your current working directory. Happy hacking!
 
-**Note:** The `react-javascript` template is the default. Running `npx @nmfs-radfish/create-radfish-app my-app` will create the same project without needing to specify the template.
+**Note:** The `react-javascript` template is the default. Running `npx @nmfs-ocio/create-radfish-app my-app` will create the same project without needing to specify the template.
 
 ### Template Directory Structure
 

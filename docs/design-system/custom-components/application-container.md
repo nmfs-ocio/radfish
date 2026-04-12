@@ -30,7 +30,7 @@ The Application container handles core application-wide functionality, including
 To use the `Application` container, instantiate it with your desired configuration:
 
 ```jsx
-import { Application } from "@nmfs-radfish/radfish";
+import { Application } from "@nmfs-ocio/radfish";
 
 const myApp = new Application({
   serviceWorker: {
@@ -48,21 +48,21 @@ const myApp = new Application({
 Once instantiated, the `Application` instance should be passed to the `<Application>` component.
 
 ```jsx
-import { Application } from "@nmfs-radfish/react-radfish";
+import { Application } from "@nmfs-ocio/react-radfish";
 
 <Application application={myApp} />;
 ```
 
-## Distinguishing `Application` from `@nmfs-radfish/radfish` vs. `@nmfs-radfish/react-radfish`
+## Distinguishing `Application` from `@nmfs-ocio/radfish` vs. `@nmfs-ocio/react-radfish`
 
-### `@nmfs-radfish/radfish` (Core)
+### `@nmfs-ocio/radfish` (Core)
 
 - Provides the underlying **non-UI logic**, such as the `Application` class for managing:
   - **Offline support**
   - **Service workers**
   - **Storage (IndexedDB, LocalStorage)**
 
-### `@nmfs-radfish/react-radfish` (React Integration)
+### `@nmfs-ocio/react-radfish` (React Integration)
 
 - Offers **React components and hooks** that make it easy to integrate `Application` container into a React app.
 - Provides:
@@ -73,5 +73,5 @@ import { Application } from "@nmfs-radfish/react-radfish";
 
 #### In Other Words:
 
-- **`@nmfs-radfish/radfish`** = the **engine** (all the logic).
-- **`@nmfs-radfish/react-radfish`** = the **React car** that sits on top of the engine, making it easy to drive your offline-ready web app in React.
+- **`@nmfs-ocio/radfish`** = the **engine** (all the logic).
+- **`@nmfs-ocio/react-radfish`** = the **React car** that sits on top of the engine, making it easy to drive your offline-ready web app in React.

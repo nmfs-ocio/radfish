@@ -31,7 +31,7 @@ One downside of this approach is that each form has it's own state management. T
 
 For an example on best practices for implementing this type of form state management, you can run an example implementation with the RADFish CLI:
 
-`npx @nmfs-radfish/create-radfish-app my-app --example computed-form-fields`
+`npx @nmfs-ocio/create-radfish-app my-app --example computed-form-fields`
 
 Here is a simplified code snippet on how to set this form state management up in a React component:
 
@@ -105,10 +105,10 @@ Additionally, you can query for whether or not the RADFish application is online
 
 > Note: This service worker is preconfigured when using the radfish-monorepo `react-javascript` template.
 
-It is up to the developer on how or where this API needs to be used. It's a good idea to use it early on in your application, so that the rest of the application can listen for changes in offline state. The `@nmfs-radfish/react-radfish` package exposes a `useOfflineStatus` hook that gives you a simple way to tap into whether or not your application is online:
+It is up to the developer on how or where this API needs to be used. It's a good idea to use it early on in your application, so that the rest of the application can listen for changes in offline state. The `@nmfs-ocio/react-radfish` package exposes a `useOfflineStatus` hook that gives you a simple way to tap into whether or not your application is online:
 
 ```jsx
-import { Application, useOfflineStatus } from "@nmfs-radfish/react-radfish";
+import { Application, useOfflineStatus } from "@nmfs-ocio/react-radfish";
 
 function App() {
   const { isOffline } = useOfflineStatus();
@@ -131,7 +131,7 @@ This underlying code listens for changes surfaced from the `navigator` API. It n
 
 It is important to fetch and cache required data needed to basic app functionality while the application is online. This can be done by fetching the required data from an API, and storing that data into IndexedDB. To see a basic example of how this can be done, you can run the `server-sync` example from the CLI:
 
-`npx @nmfs-radfish/create-radfish-app my-app --example server-sync`
+`npx @nmfs-ocio/create-radfish-app my-app --example server-sync`
 
 This example fetches several JSON arrays from our Mock API, then stores and caches it in IndexedDB. The application then can reference the data in IndexedDB without a network connection. Keep in mind that it is up to the developer to decide when and how to invalidate this IndexedDB cache based on their application's needs.
 
@@ -242,7 +242,7 @@ export default MyComponent;
 **1. Wrap your component with `OfflineStorageWrapper`:**
 
 ```jsx
-import { OfflineStorageWrapper } from "@nmfs-radfish/react-radfish";
+import { OfflineStorageWrapper } from "@nmfs-ocio/react-radfish";
 
 <OfflineStorageWrapper config={config}>
   <YourComponent />
@@ -279,7 +279,7 @@ const config = {
 **2. Use the useOfflineStorage hook in child components:**
 
 ```jsx
-import { useOfflineStorage } from "@nmfs-radfish/react-radfish";
+import { useOfflineStorage } from "@nmfs-ocio/react-radfish";
 
 function YourComponent() {
   const {
