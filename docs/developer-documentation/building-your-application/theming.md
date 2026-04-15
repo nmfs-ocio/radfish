@@ -58,9 +58,13 @@ export default defineConfig(() => {
 });
 ```
 
-### 4. Remove old USWDS CSS imports
+### 4. Remove old USWDS CSS imports (older `@nmfs-radfish` projects only)
 
-The theme plugin compiles and injects USWDS styles automatically. If your project imports USWDS CSS directly (e.g. from `@trussworks/react-uswds`), **you must remove those imports** or they will override your theme colors.
+:::info
+This step only applies if you are migrating from an older project that uses `@nmfs-radfish/*` packages. Projects created with `@nmfs-ocio/*` packages already have theming configured correctly and can skip this step.
+:::
+
+The theme plugin compiles and injects USWDS styles automatically. Older `@nmfs-radfish` projects may import USWDS CSS directly (e.g. from `@trussworks/react-uswds`). **You must remove those imports** or they will override your theme colors.
 
 Look for and remove lines like these from your CSS files (commonly in `src/index.css`):
 
@@ -71,7 +75,7 @@ Look for and remove lines like these from your CSS files (commonly in `src/index
 ```
 
 :::warning
-This is the most common cause of theme colors not applying. The default USWDS CSS loads after the theme plugin's compiled CSS and overwrites your custom tokens.
+This is the most common cause of theme colors not applying when migrating older projects. The default USWDS CSS loads after the theme plugin's compiled CSS and overwrites your custom tokens.
 :::
 
 ### 5. Clear cache and restart
