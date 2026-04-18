@@ -20,8 +20,8 @@ The storage system is built around several key components that work together:
 The most common way to set up storage in a RADFish application is through the `Application` constructor. This approach automatically handles connecting to the storage backend and setting up collections.
 
 ```jsx
-import { Application } from "@nmfs-radfish/radfish";
-import { IndexedDBConnector } from "@nmfs-radfish/radfish/storage";
+import { Application } from "@nmfs-ocio/radfish";
+import { IndexedDBConnector } from "@nmfs-ocio/radfish/storage";
 
 const app = new Application({
   stores: {
@@ -71,7 +71,7 @@ RADFish provides two built-in connectors:
 2. **LocalStorageConnector** - Uses localStorage for storage (limited capacity, but simpler)
 
 ```jsx
-import { IndexedDBConnector } from "@nmfs-radfish/radfish/storage";
+import { IndexedDBConnector } from "@nmfs-ocio/radfish/storage";
 
 const connector = new IndexedDBConnector("weather-survey-app");
 ```
@@ -193,7 +193,7 @@ try {
 A Store manages collections for a specific domain of your application. Each store has a connector and can have multiple collections.
 
 ```jsx
-import { Store } from "@nmfs-radfish/radfish/storage";
+import { Store } from "@nmfs-ocio/radfish/storage";
 
 const store = new Store({
   name: "weatherSurvey",
@@ -324,8 +324,8 @@ connector.addEventListener('create', (event) => {
 Here's an example of how to set up a complete weather survey application with forms:
 
 ```jsx
-import { Application } from "@nmfs-radfish/radfish";
-import { IndexedDBConnector } from "@nmfs-radfish/radfish/storage";
+import { Application } from "@nmfs-ocio/radfish";
+import { IndexedDBConnector } from "@nmfs-ocio/radfish/storage";
 
 // Initialize the application with storage
 const app = new Application({

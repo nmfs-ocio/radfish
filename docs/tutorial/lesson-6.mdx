@@ -23,7 +23,7 @@ Before we can access RADFish collections and format our data, we need to import 
 Open `src/pages/ReviewSubmit.jsx` and add these imports to your existing import statements:
 
 ```jsx title="src/pages/ReviewSubmit.jsx"
-import { useApplication } from "@nmfs-radfish/react-radfish";
+import { useApplication } from "@nmfs-ocio/react-radfish";
 import { Button } from "@trussworks/react-uswds";
 import Layout from "../components/Layout";
 import {
@@ -199,7 +199,7 @@ import {
   //diff-add-start
   Table,
   //diff-add-end
-} from "@nmfs-radfish/react-radfish";
+} from "@nmfs-ocio/react-radfish";
 ```
 
 **About the RADFish Table Component:**
@@ -289,7 +289,7 @@ import {
   //diff-add-start
   useOfflineStatus,
   //diff-add-end
-} from "@nmfs-radfish/react-radfish";
+} from "@nmfs-ocio/react-radfish";
 import {
   Button,
 } from "@trussworks/react-uswds";

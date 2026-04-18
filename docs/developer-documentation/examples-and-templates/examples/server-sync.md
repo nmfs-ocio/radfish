@@ -40,8 +40,8 @@ This example will render as shown in this screenshot:
 In `index.jsx`, define your Application with stores and collections for sync data:
 
 ```jsx
-import { Application } from "@nmfs-radfish/radfish";
-import { IndexedDBConnector } from "@nmfs-radfish/radfish/storage";
+import { Application } from "@nmfs-ocio/radfish";
+import { IndexedDBConnector } from "@nmfs-ocio/radfish/storage";
 
 const app = new Application({
   stores: {
@@ -80,7 +80,7 @@ Key schema design:
 Import RADFish utilities and access your collections:
 
 ```jsx
-import { useOfflineStatus, useApplication } from "@nmfs-radfish/react-radfish";
+import { useOfflineStatus, useApplication } from "@nmfs-ocio/react-radfish";
 
 const { isOffline } = useOfflineStatus();
 const application = useApplication();

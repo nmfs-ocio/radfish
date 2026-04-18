@@ -64,7 +64,7 @@ For more details on available Trussworks props, refer to the [Trussworks Table D
 This example shows a simple table, with two columns and two rows.
 
 ```jsx
-import { Table } from "@nmfs-radfish/react-radfish";
+import { Table } from "@nmfs-ocio/react-radfish";
 
 <Table
   data={[
@@ -85,7 +85,7 @@ This code will render as shown in this screenshot:
 This example shows a table with multiple pages by using `paginationOptions`.
 
 ```jsx
-import { Table } from "@nmfs-radfish/react-radfish";
+import { Table } from "@nmfs-ocio/react-radfish";
 
 <Table
   data={[

@@ -10,14 +10,14 @@ RADFish app users can be out at sea for an extended period of time. They may not
 
 ## Storage Models
 
-The `@nmfs-radfish/radfish`package provides two storage methods available `LocalStorageMethod` and `IndexedDBMethod`.
+The `@nmfs-ocio/radfish`package provides two storage methods available `LocalStorageMethod` and `IndexedDBMethod`.
 
 ### LocalStorage
 
 In order to save to LocalStorage, we must provide a unique key that will used to store all of the application data.
 
 ```js
-import { LocalStorageMethod } from '@nmfs-radfish/radfish';
+import { LocalStorageMethod } from '@nmfs-ocio/radfish';
 
 new LocalStorageMethod(
   "survey-app-storage"
@@ -29,7 +29,7 @@ new LocalStorageMethod(
 When using IndexedDB, we also need to provide a schema version and model structures. These are used to manage future data migrations.
 
 ```js
-import { IndexedDBMethod } from '@nmfs-radfish/radfish';
+import { IndexedDBMethod } from '@nmfs-ocio/radfish';
 
 new IndexedDBMethod(
   "survey-app-storage",
@@ -43,7 +43,7 @@ new IndexedDBMethod(
 
 ## React Usage
 
-The `@nmfs-radfish/react-radfish` package exposes the `OfflineStorageWrapper` component. This creates a storage model available to that React context.
+The `@nmfs-ocio/react-radfish` package exposes the `OfflineStorageWrapper` component. This creates a storage model available to that React context.
 
 ## **`useOfflineStorage` Hooks API**
 
@@ -106,8 +106,8 @@ Example usage when using IndexedDB:
 **App.jsx**
 ```jsx
 import React, { useEffect, useState } from "react";
-import { Table } from "@nmfs-radfish/react-radfish";
-import { useOfflineStorage, OfflineStorageWrapper } from "@nmfs-radfish/react-radfish";
+import { Table } from "@nmfs-ocio/react-radfish";
+import { useOfflineStorage, OfflineStorageWrapper } from "@nmfs-ocio/react-radfish";
 
 const offlineStorageConfig = {
   type: "indexedDB",

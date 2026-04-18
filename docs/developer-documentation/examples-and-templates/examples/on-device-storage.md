@@ -32,8 +32,8 @@ This example will render as shown in this screenshot:
 In the `index.jsx` file, define your Application with stores and schemas:
 
 ```jsx
-import { Application } from "@nmfs-radfish/radfish";
-import { IndexedDBConnector } from "@nmfs-radfish/radfish/storage";
+import { Application } from "@nmfs-ocio/radfish";
+import { IndexedDBConnector } from "@nmfs-ocio/radfish/storage";
 
 const app = new Application({
   stores: {
@@ -116,7 +116,7 @@ const App = ({ application }) => {
 In any component within the Application context, access collections using the `useApplication` hook:
 
 ```jsx
-import { useApplication } from "@nmfs-radfish/react-radfish";
+import { useApplication } from "@nmfs-ocio/react-radfish";
 
 const HomePage = () => {
   const application = useApplication();
