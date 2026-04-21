@@ -14,15 +14,15 @@ const config = {
   staticDirectories: ["static"],
 
   // Set the production url of your site here
-  url: "https://NMFS-RADFish.github.io",
+  url: "https://nmfs-ocio.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/radfish/",
   trailingSlash: false,
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "NMFS-RADFish", // Usually your GitHub org/user name.
-  projectName: "documentation", // Usually your repo name.
+  organizationName: "nmfs-ocio", // Usually your GitHub org/user name.
+  projectName: "radfish", // Usually your repo name.
 
   onBrokenLinks: "warn",
   markdown: {
@@ -99,7 +99,7 @@ const config = {
             label: "About",
           },
           {
-            href: "https://github.com/NMFS-RADFish",
+            href: "https://github.com/nmfs-ocio",
             label: "GitHub",
             position: "right",
           },

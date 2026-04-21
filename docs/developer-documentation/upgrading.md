@@ -8,21 +8,21 @@ sidebar_position: 7
 
 Updating your RADFish version ensures stability, security, and the latest features. It also keeps your project free of warnings and errors. This section provides a step-by-step guide on how to update your RADFish packages. 
 
-### 1. Upgrade Packages
+### Upgrade Packages
 
     1. **Run command:** In the root of your project, run:
         ```bash
         npm update
         ```
 
-        This will update both `@nmfs-radfish/radfish` and `@nmfs-radfish/react-radfish` along with their dependencies to the latest compatible versions.
+        This will update both `@nmfs-ocio/radfish` and `@nmfs-ocio/react-radfish` along with their dependencies to the latest compatible versions.
 
     2. **Check for Changes:**  After running the update, you should verify that everything is working as expected. It's a good practice to run your test suite to catch any potential issues:
         ```bash
         npm test
         ```
 
-### 2. Handling Warnings During Updates
+### Handling Warnings During Updates
 
     While updating your packages, you might encounter warnings. These warnings may not necessarily be RADFish-specific. These warnings often occur when certain packages in your project are outdated or incompatible. To get rid of these warnings:
 
@@ -46,13 +46,47 @@ Updating your RADFish version ensures stability, security, and the latest featur
         npm uninstall <deprecated-package>
         ```
 
-### 3. Overview of Packages Managed in `radfish` and `react-radfish`
+### Migrating from `@nmfs-radfish` to `@nmfs-ocio`
+
+If your project was originally set up using the `@nmfs-radfish` npm packages, you will need to migrate to the `@nmfs-ocio` GitHub registry packages. This is a scope change, not a version update, so `npm update` will not handle it automatically.
+
+1. **Uninstall the old packages:**
+    ```bash
+    npm uninstall @nmfs-radfish/radfish @nmfs-radfish/react-radfish @nmfs-radfish/create-radfish-app
+    ```
+
+2. **Configure the GitHub registry** (if you haven't already). See the [Getting Started prerequisites](./getting-started.mdx) for setup instructions.
+
+3. **Install the new packages:**
+    ```bash
+    npm install @nmfs-ocio/radfish @nmfs-ocio/react-radfish
+    ```
+
+    :::tip
+    If you encounter peer dependency errors during installation, you may need to use `npm install --legacy-peer-deps`. This can happen if your project uses React 19 and the packages haven't updated their peer dependencies yet.
+    :::
+
+4. **Update imports** across your project. Replace all references from the old scope to the new one:
+    ```diff
+    - import { ... } from '@nmfs-radfish/radfish';
+    + import { ... } from '@nmfs-ocio/radfish';
+
+    - import { ... } from '@nmfs-radfish/react-radfish';
+    + import { ... } from '@nmfs-ocio/react-radfish';
+    ```
+
+5. **Run your tests** to verify everything works:
+    ```bash
+    npm test
+    ```
+
+### Overview of Packages Managed in `radfish` and `react-radfish`
 
 In your RADFish project, these packages are managed and should be kept up to date:
-- `@nmfs-radfish/radfish`
-- `@nmfs-radfish/react-radfish`
+- `@nmfs-ocio/radfish`
+- `@nmfs-ocio/react-radfish`
 
-#### `@nmfs-radfish/radfish`
+#### `@nmfs-ocio/radfish`
 This package handles the core logic and utilities for RADFish. It manages several dependencies that are essential for the functionality of the RADFish system:
 
    - **Dependencies:**
@@ -60,7 +94,7 @@ This package handles the core logic and utilities for RADFish. It manages severa
         - `msw`: A library for mocking API requests in development and testing environments.
         - `react`: The core React library required for building user interfaces in RADFish projects.
 
-#### `@nmfs-radfish/react-radfish`
+#### `@nmfs-ocio/react-radfish`
 
    This package provides UI components for React applications using RADFish. It manages several dependencies that enhance the user interface and functionality:
 

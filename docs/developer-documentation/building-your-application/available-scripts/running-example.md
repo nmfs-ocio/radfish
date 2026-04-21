@@ -8,7 +8,7 @@ RADFish ships with several different [boilerplate examples](../../examples-and-t
 
 For instance, there's an example that demonstrates how to build a multi-step form that caches each step within IndexedDB. Caching the form allows it to be referenced without a network connection. In order to run this example, you can run this command:
 
-`npx @nmfs-radfish/create-radfish-app my-app --example multistep-form`
+`npx @nmfs-ocio/create-radfish-app my-app --example multistep-form`
 
 This will clone the code from the `multistep-form` onto your machine. It also spawns a new web process on port `3000` or another port if that is already taken.
 

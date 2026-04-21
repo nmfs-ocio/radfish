@@ -26,7 +26,7 @@ As an open-source project, RADFish is committed to transparency and collaboratio
 Contributors to the RADFish project should follow our Open Source Policy:
 
 - This project is licensed under the [Apache License](https://opensource.org/license/apache-2-0/), Version 2.0. Please make sure that any contributions comply with this license. If you are submitting code or other contributions, you are agreeing to license your contributions under this same license.
-- For external libraries or code used in the project, we provide attribution as necessary. If you believe an attribution is missing, please [open an issue](https://github.com/NMFS-RADFish/radfish/issues).
+- For external libraries or code used in the project, we provide attribution as necessary. If you believe an attribution is missing, please [open an issue](https://github.com/nmfs-ocio/radfish-monorepo/issues).
 - We leverage open-source tools and libraries where appropriate to meet NOAA Fisheries' needs for efficient and scalable web applications.
 - Code developed by NOAA Fisheries staff is by default in the public domain. However, modifications of third-party open-source libraries are considered “joint works” and are released under the terms of the original license.
 
@@ -60,7 +60,7 @@ To ensure optimal performance, we recommend using the latest versions of the mos
 
 ## 7\. Community and Contribution Guidelines
 
-We encourage everyone to participate in RADFish’s development by reviewing our [Contribution Guidelines](https://nmfs-radfish.github.io/radfish/about/contribute). You can contribute by submitting bug reports, feature requests, or improving documentation. We ask all contributors to follow our [Code of Conduct](https://nmfs-radfish.github.io/radfish/about/commmunity) to maintain a respectful and collaborative environment.
+We encourage everyone to participate in RADFish’s development by reviewing our [Contribution Guidelines](https://nmfs-ocio.github.io/radfish/about/contribute). You can contribute by submitting bug reports, feature requests, or improving documentation. We ask all contributors to follow our [Code of Conduct](https://nmfs-ocio.github.io/radfish/about/commmunity) to maintain a respectful and collaborative environment.
 
 ## 8\. Contact Us
 

@@ -7,7 +7,7 @@ description: Learn to build and structure your components
 
 ## Building your first page and form
 
-RADFish uses standard components from the [`react-uswds`](https://github.com/trussworks/react-uswds) open source project. The RADFish project further extends the react-uswds library. These components maintain the functionality of react-uswds, but are branded with NOAA themes and styles. These components live in the [`react-radfish` directory](https://github.com/NMFS-RADFish/react-components). This allows for development in a modern React environment with a NOAA look and feel.
+RADFish uses standard components from the [`react-uswds`](https://github.com/trussworks/react-uswds) open source project. The RADFish project further extends the react-uswds library. These components maintain the functionality of react-uswds, but are branded with NOAA themes and styles. To learn more about these extended components and how to use them, visit the [Custom Components](https://nmfs-ocio.github.io/radfish/design-system/custom-components) documentation. This allows for development in a modern React environment with a NOAA look and feel.
 
 For more information on the full `react-uswds` library, check out the deployed storybook: [https://trussworks.github.io/react-uswds/](https://trussworks.github.io/react-uswds/?path=/docs/welcome--docs)
 

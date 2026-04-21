@@ -9,7 +9,7 @@ description: USWDS, NOAA branding and Styling, and 508 compliance
 
 The U.S. Web Design System (USWDS) is a set of design and development principles and guidelines. It helps deveolpers create standardized, accessible, consistent, and user-friendly websites and applications. It helps developers adhere to 508 compliance guidelines.
 
-In most cases, RADFish uses standard components from the [`react-uswds`](https://github.com/trussworks/react-uswds) open source project. The RADFish project further extends the react-uswds library. These components maintain the functionality of react-uswds, but are branded with NOAA themes and styles. These components live in the [`react-radfish` directory](https://github.com/NMFS-RADFish/react-components). This allows modern React development with NOAA look and feel.
+In most cases, RADFish uses standard components from the [`react-uswds`](https://github.com/trussworks/react-uswds) open source project. The RADFish project further extends the react-uswds library. These components maintain the functionality of react-uswds, but are branded with NOAA themes and styles. To learn more about these extended components and how to use them, visit the [Custom Components](https://nmfs-ocio.github.io/radfish/design-system/custom-components) documentation. This allows modern React development with NOAA look and feel.
 
 For information on the full `react-uswds` library, refer to their [storybook](https://trussworks.github.io/react-uswds/?path=/docs/welcome--docs).
 
@@ -51,7 +51,7 @@ Branding creates a distinct identity for a product or application. It defines an
 
 You might have noticed that the components above do not have any `className` assigned. You may be wondering how to style that component. There are a few things to keep in mind when styling components:
 
-- Each component in `react-radfish` has it’s own scoped CSS file. This file modifies the existing `@trussworks` CSS to inject NOAA styles. This file should not be touched. If you notice a bug or issue, please consider [contributing to the project](https://nmfs-radfish.github.io/radfish/about/contribute).
+- Each component in `react-radfish` has it’s own scoped CSS file. This file modifies the existing `@trussworks` CSS to inject NOAA styles. This file should not be touched. If you notice a bug or issue, please consider [contributing to the project](https://nmfs-ocio.github.io/radfish/about/contribute).
 - You can modify the general theme of these components in the `styles/theme.css` file. You can change things like color variables, font-family, and line-height here. They will be propagated throughout the application, as well as throughout `react-radfish`. RADFish uses CSS variables, like this:
 
 ```css
@@ -69,7 +69,7 @@ You might have noticed that the components above do not have any `className` ass
 - If you need to add additional styles to a particular component, you can add another `className` **after** the component has been imported from `react-radfish`:
 
 ```jsx
-import { Label } from "@nmfs-radfish/react-radfish";
+import { Label } from "@nmfs-ocio/react-radfish";
 
 <Label htmlFor="fullName" className="your-custom-class">
   Full Name

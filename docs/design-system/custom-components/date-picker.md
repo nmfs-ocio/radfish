@@ -34,7 +34,7 @@ By following the best practices and examples below, developers can add the DateP
 Import the `DatePicker` component into your desired file:
 
 ```jsx
-import { DatePicker } from "@nmfs-radfish/react-radfish";
+import { DatePicker } from "@nmfs-ocio/react-radfish";
 ```
 
 ## Usage examples
@@ -45,7 +45,7 @@ A simple date picker with essential props:
 
 ```jsx
 import React from "react";
-import { DatePicker } from "@nmfs-radfish/react-radfish";
+import { DatePicker } from "@nmfs-ocio/react-radfish";
 
 const BasicForm = () => {
   return (
@@ -70,7 +70,7 @@ Using a different input type and setting a default value:
 
 ```jsx
 import React from "react";
-import { DatePicker } from "@nmfs-radfish/react-radfish";
+import { DatePicker } from "@nmfs-ocio/react-radfish";
 
 const AppointmentForm = () => {
   return (
@@ -97,7 +97,7 @@ Managing the DatePicker value through React state:
 
 ```jsx
 import React, { useState } from "react";
-import { DatePicker } from "@nmfs-radfish/react-radfish";
+import { DatePicker } from "@nmfs-ocio/react-radfish";
 
 const ControlledForm = () => {
   const [selectedDate, setSelectedDate] = useState("");
@@ -135,7 +135,7 @@ Applying custom CSS classes to the DatePicker:
 
 ```jsx
 import React from "react";
-import { DatePicker } from "@nmfs-radfish/react-radfish";
+import { DatePicker } from "@nmfs-ocio/react-radfish";
 
 const StyledForm = () => {
   return (

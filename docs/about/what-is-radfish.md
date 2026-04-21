@@ -40,4 +40,4 @@ By adopting free, open source, agile development principles, RADFish will contin
 
 RADFish modernizes fisheries data collection. It addresses the current challenges of fragmented systems and inconsistent practices by enabling the efficient development of new, secure, and accessible electronic reporting systems.  NOAA Fisheries is committed to making this framework publicly available and open-source, ensuring its broad utility and long-term sustainability across fisheries programs nationwide.
 
-For more detailed information, please refer to our project documentation and source code repository on [GitHub](https://nmfs-radfish.github.io/radfish/).
+For more detailed information, please refer to our project documentation and source code repository on [GitHub](https://nmfs-ocio.github.io/radfish/).

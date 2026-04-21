@@ -12,22 +12,22 @@ Each exammple is scoped to teach developers how to implement core pieces of func
 
 These examples are meant to be a reference for any RADFish project. These examples can serve as a starting point to build out a new RADFish application. However, we recommend starting with a fresh `react-javascript` template.
 
-The source code for each example is in the open source repo for RADFish [boilerplate](https://github.com/NMFS-RADFish/boilerplate/tree/main/examples). Each example can be cloned and run separately as you are working with each from the RADFish CLI. To learn how to run these scripts, refer to the [running examples](./building-your-application/available-scripts/running-example) section.
+The source code for each example is in the open source repo for [radfish-monorepo boilerplate](https://github.com/nmfs-ocio/radfish-monorepo/tree/main/examples). Each example can be cloned and run separately as you are working with each from the RADFish CLI. To learn how to run these scripts, refer to the [running examples](./building-your-application/available-scripts/running-example) section.
 
 ### List of Examples
 Here's a list of pre-built examples that you can use as a starting point for your application. These examples are scoped to one core feature.
 
-1. [Computed Form Fields](https://github.com/NMFS-RADFish/boilerplate/blob/main/examples/computed-form-fields/README.md)
-1. [Conditional Form Fields](https://github.com/NMFS-RADFish/boilerplate/blob/main/examples/conditional-form-fields/README.md)
-1. [Field Validators](https://github.com/NMFS-RADFish/boilerplate/blob/main/examples/field-validators/README.md)
-1. [Form Structure](https://github.com/NMFS-RADFish/boilerplate/blob/main/examples/form-structure/README.md)
-1. [Mock API](https://github.com/NMFS-RADFish/boilerplate/blob/main/examples/mock-api/README.md)
-1. [Multistep Form](https://github.com/NMFS-RADFish/boilerplate/blob/main/examples/multistep-form/README.md)
-1. [Network Status](https://github.com/NMFS-RADFish/boilerplate/blob/main/examples/network-status/README.md)
-1. [On Device Storage](https://github.com/NMFS-RADFish/boilerplate/blob/main/examples/on-device-storage/README.md)
-1. [Persisted Form](https://github.com/NMFS-RADFish/boilerplate/blob/main/examples/persisted-form/README.md)
-1. [Server Sync](https://github.com/NMFS-RADFish/boilerplate/blob/main/examples/server-sync/README.md)
-1. [Simple Table](https://github.com/NMFS-RADFish/boilerplate/blob/main/examples/simple-table/README.md)
+1. [Computed Form Fields](https://github.com/nmfs-ocio/radfish-monorepo/blob/main/examples/computed-form-fields/README.md)
+2. [Conditional Form Fields](https://github.com/nmfs-ocio/radfish-monorepo/blob/main/examples/conditional-form-fields/README.md)
+3. [Field Validators](https://github.com/nmfs-ocio/radfish-monorepo/blob/main/examples/field-validators/README.md)
+4. [Form Structure](https://github.com/nmfs-ocio/radfish-monorepo/blob/main/examples/form-structure/README.md)
+5. [Mock API](https://github.com/nmfs-ocio/radfish-monorepo/blob/main/examples/mock-api/README.md)
+6. [Multistep Form](https://github.com/nmfs-ocio/radfish-monorepo/blob/main/examples/multistep-form/README.md)
+7. [Network Status](https://github.com/nmfs-ocio/radfish-monorepo/blob/main/examples/network-status/README.md)
+8. [On Device Storage](https://github.com/nmfs-ocio/radfish-monorepo/blob/main/examples/on-device-storage/README.md)
+9. [Persisted Form](https://github.com/nmfs-ocio/radfish-monorepo/blob/main/examples/persisted-form/README.md)
+10. [Server Sync](https://github.com/nmfs-ocio/radfish-monorepo/blob/main/examples/server-sync/README.md)
+11. [Simple Table](https://github.com/nmfs-ocio/radfish-monorepo/blob/main/examples/simple-table/README.md)
 
 ## Templates
 
@@ -37,11 +37,11 @@ Templates come pre-configured with everything to start coding your new project r
 
 Creating a new project based on a template is similar to running an example. If you want to create a new project from the `react-javascript` library, execute this RADFish CLI command:
 
- `npx @nmfs-radfish/create-radfish-app my-app --template react-javascript`
+ `npx @nmfs-ocio/create-radfish-app my-app --template react-javascript`
 
 This will create a new RADFish project named `my-app` in your current working directory. Happy hacking!
 
-**Note:** The `react-javascript` template is the default. Running `npx @nmfs-radfish/create-radfish-app my-app` will create the same project without needing to specify the template.
+**Note:** The `react-javascript` template is the default. Running `npx @nmfs-ocio/create-radfish-app my-app` will create the same project without needing to specify the template.
 
 ### Template Directory Structure
 
