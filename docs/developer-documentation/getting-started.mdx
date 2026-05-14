@@ -74,7 +74,7 @@ No additional setup is needed. RADFish packages are publicly available on the np
 
 ## Quick Start
 
-### Option 1: Scaffold a new app from a template
+### Scaffold a new app from a template
 
 Start your app with a barebones and pre-configured [template](./examples-and-templates#templates).
 
@@ -95,72 +95,6 @@ Once the development server starts, visit http://localhost:3000/ in your browser
 ```bash
 npx @nmfs-radfish/create-radfish-app@latest my-app
 cd my-app
-npm start
-```
-
-Once the development server starts, visit http://localhost:3000/ in your browser to see your app.
-
-</TabItem>
-</Tabs>
-
-### Option 2: Scaffold a new app from an example
-
-Select an [example](/radfish/developer-documentation/examples-and-templates) and run [the command](./building-your-application/available-scripts/running-example.md) using the `--example` tag.
-
-<Tabs groupId="registry">
-<TabItem value="github" label="GitHub" default>
-
-```bash
-npx @nmfs-ocio/create-radfish-app my-app --example multistep-form
-cd my-app
-npm start
-```
-
-</TabItem>
-<TabItem value="npm" label="npm">
-
-```bash
-npx @nmfs-radfish/create-radfish-app my-app --example multistep-form
-cd my-app
-npm start
-```
-
-</TabItem>
-</Tabs>
-
-### Option 3: Clone the monorepo repository to access all examples
-
-To get all the examples, clone the [monorepo repository](https://github.com/nmfs-ocio/monorepo):
-
-<Tabs groupId="registry">
-<TabItem value="github" label="GitHub" default>
-
-```bash
-git clone git@github.com:nmfs-ocio/radfish-monorepo.git
-```
-
-Then navigate to the example you want to run and start the app:
-
-```bash
-cd radfish-monorepo/examples/[example you want to run]
-npm install
-npm start
-```
-
-Once the development server starts, visit http://localhost:3000/ in your browser to see your app.
-
-</TabItem>
-<TabItem value="npm" label="npm">
-
-```bash
-git clone https://github.com/nmfs-ocio/monorepo.git
-```
-
-Then navigate to the example you want to run and start the app:
-
-```bash
-cd monorepo/examples/[example you want to run]
-npm install
 npm start
 ```
 
