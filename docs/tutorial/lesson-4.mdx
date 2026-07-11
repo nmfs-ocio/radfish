@@ -151,7 +151,7 @@ import {
   COLLECTION_NAMES,
 } from "../utils";
 import { useTripNavigation, useTripData, useCatchData } from "../hooks";
-import { Layout } from "../components/Layout";
+import Layout from "../components/Layout";
 ```
 
 **Understanding the Provided Imports:**
@@ -915,7 +915,7 @@ Let's examine the provided `updateCatch` function that handles updating individu
     const catchToUpdate = catches[index];
     
     try {
-      const tripStore = app.stores[STORE_NAMES.TRIP];
+      const tripStore = app.stores[STORE_NAMES.TRIP_STORE];
       const catchCollection = tripStore.getCollection(COLLECTION_NAMES.CATCH_COLLECTION);
 
       // Prepare data for update (ensure correct types)
@@ -1011,7 +1011,7 @@ The delete functionality is also provided with proper separation of concerns, in
     const catchToDelete = catches[index];
     
     try {
-      const tripStore = app.stores[STORE_NAMES.TRIP];
+      const tripStore = app.stores[STORE_NAMES.TRIP_STORE];
       const catchCollection = tripStore.getCollection(COLLECTION_NAMES.CATCH_COLLECTION);
 
       // Remove from RADFish/IndexedDB
@@ -1064,7 +1064,7 @@ The recorded catch handlers involve advanced patterns like direct database acces
 
 ## Step 7: Testing the Complete Implementation
 
-After implementing the 5 event handlers (handleInputChange, handleTimeChange, resetForm, handleSubmit, and handleMainSubmit), let's test both adding new catches and managing recorded catches.
+After implementing the 5 event handlers (handleInputChange, handleTimeChange, resetForm, handleAddCatch, and handleSubmit), let's test both adding new catches and managing recorded catches.
 
 ### 7.1: Test Adding New Catches
 
