@@ -90,6 +90,8 @@ The `warnAt` / `criticalAt` thresholds (and the `level` field and `storage:press
 
 One consequence: the browser quota is usually huge (often ~10 GB+), so for text-based data these thresholds rarely trip. If you want a warning tied to *your app's own* usage (e.g. "warn when catch data passes 40 MB"), that's an app-level budget you'd check yourself against `storesBytes` / `radfishBytes` — RADFish doesn't impose one.
 
+Note that `logsBytes` is **self-bounded** by the logger's `maxSize` (the logger evicts its own oldest records), so it can't grow without limit. **`storesBytes`** (your data Store) has **no cap** — that's the number to watch for growth.
+
 :::
 
 ## Reading it in a React component
