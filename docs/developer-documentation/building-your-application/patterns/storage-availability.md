@@ -40,14 +40,20 @@ Leave it out entirely and everything still works — `level` just uses the defau
 Everything hangs off the `Application`:
 
 ```js
-app.storageEstimate                  // cached snapshot (or null until init completes)
-await app.getStorageEstimate()       // read a fresh snapshot (also refreshes the cache)
+app.storageEstimate                  // cached snapshot (lightweight at init — see note)
+await app.getStorageEstimate()       // fresh snapshot incl. per-subsystem bytes; refreshes the cache
 await app.requestPersistence()       // ask the browser to protect storage -> boolean
 await app.getPersistenceStatus()     // 'persisted' | 'prompt' | 'never'
 app.storageDatabases()               // names of the IndexedDB databases RADFish owns
 app.on("storage:pressure", handler)  // fires when browser whole-origin usage crosses warnAt/criticalAt
 app.off("storage:pressure", handler)
 ```
+
+:::note The init snapshot is lightweight
+
+The snapshot taken automatically at startup (`app.storageEstimate`) is **browser-only** — `logsBytes`, `stores`, `storesBytes`, and `radfishBytes` are `null`. Measuring per-subsystem bytes reads every record, so RADFish skips it at init to avoid delaying startup on a large persisted Store. Call **`await app.getStorageEstimate()`** to get those numbers (that's what populates them). If you ever want a browser-only read on purpose, pass `getStorageEstimate({ measureSubsystems: false })`.
+
+:::
 
 Reading the per-subsystem numbers is a one-liner — no hook or extra setup:
 
