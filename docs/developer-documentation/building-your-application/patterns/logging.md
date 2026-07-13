@@ -26,13 +26,13 @@ const app = new Application({
 });
 ```
 
-**2. Log from anywhere** with the `useLogger()` hook:
+**2. Log from anywhere** — the logger lives on the `Application`, so reach it with `useApplication().logger`:
 
 ```jsx
-import { useLogger } from "@nmfs-ocio/react-radfish";
+import { useApplication } from "@nmfs-ocio/react-radfish";
 
 function SaveButton() {
-  const logger = useLogger();
+  const logger = useApplication().logger;
   return (
     <button onClick={() => logger.stream("app").info("user clicked save", { id: 42 })}>
       Save
@@ -51,7 +51,7 @@ Each stream has a minimum **level**, and records below it are dropped. The `app`
 
 ## Overview
 
-- The logger is configured **once** on the `Application` and is then available throughout your app via `useLogger()`.
+- The logger is configured **once** on the `Application` and is then available throughout your app via `app.logger` (in React, `useApplication().logger`).
 - **Streams** are named log channels, each with a minimum level. Feature logs and noisy infrastructure logs can live in separate streams.
 - **Sinks** are where records go: the console always, plus optional IndexedDB persistence so logs survive a page refresh.
 - **Levels** are ordered `debug` < `info` < `warn` < `error`. A record whose level is below its stream's configured level is dropped.
@@ -127,13 +127,13 @@ Middleware runs in order. In the example above, the first one enriches every rec
 
 ## Using the logger in components
 
-Reach the logger from any component inside `<Application>` with the `useLogger()` hook:
+Reach the logger from any component inside `<Application>` with `useApplication().logger`:
 
 ```jsx
-import { useLogger } from "@nmfs-ocio/react-radfish";
+import { useApplication } from "@nmfs-ocio/react-radfish";
 
 function Checkout() {
-  const logger = useLogger();
+  const logger = useApplication().logger;
   const app = logger.stream("app");
 
   const onPay = async () => {
@@ -150,14 +150,14 @@ function Checkout() {
 }
 ```
 
-`useLogger()` requires a configured logger — if you call it without a `logger` block on your `Application`, it throws a descriptive error telling you exactly what to add.
+`app.logger` is `null` if you haven't added a `logger` block to your `Application`, so make sure one is configured before calling `.stream()`.
 
 ### Reading persisted logs
 
 When IndexedDB is configured, you can read logs back (for example to show recent activity, or to hydrate previous-session logs on startup):
 
 ```js
-const logger = useLogger();
+const logger = useApplication().logger;
 const records = await logger.persistence.loadLogs(); // [{ timestamp, stream, level, message, attributes }, ...]
 await logger.persistence.clearLogs();                // wipe the persisted logs
 ```
