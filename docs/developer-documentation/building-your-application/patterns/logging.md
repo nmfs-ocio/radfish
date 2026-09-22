@@ -101,7 +101,7 @@ When provided, logs are persisted to IndexedDB so they survive a page refresh. I
 | `dbName` | `string` | The IndexedDB database name. |
 | `maxSize` | `string` \| `number` | A storage budget for persisted logs. Default `"5MB"`. |
 
-`maxSize` accepts either a **human-friendly string** like `"5MB"`, `"500KB"`, or `"1GB"`, or a **raw number of bytes**. Units are **binary** (`1KB` = 1024 bytes). When the store exceeds the budget, the **oldest records are evicted first** — the newest record is always kept. An invalid value (a non-positive number, or an unparseable string) throws immediately rather than silently disabling the budget.
+`maxSize` accepts either a **human-friendly string** like `"5MB"`, `"500KB"`, or `"1GB"`, or a **raw number of bytes**. Units are **binary** (`1KB` = 1024 bytes). When the store exceeds the budget, the **oldest records are evicted first** — the newest record is always kept. An invalid value (a non-positive number, or an unparseable string) **disables IndexedDB persistence** — the app keeps running with console logging and you'll see a `[radfish] logger IndexedDB persistence disabled — …` warning in the console explaining why. A logging misconfiguration degrades logging rather than breaking app startup.
 
 :::note `maxSize` is an approximate content budget, not an exact disk cap
 
@@ -158,7 +158,7 @@ When IndexedDB is configured, you can read logs back (for example to show recent
 
 ```js
 const logger = useApplication().logger;
-const records = await logger.persistence.loadLogs(); // [{ timestamp, stream, level, message, attributes }, ...]
+const records = await logger.persistence.loadLogs(); // [{ _id, timestamp, stream, level, message, attributes }, ...]
 await logger.persistence.clearLogs();                // wipe the persisted logs
 ```
 
