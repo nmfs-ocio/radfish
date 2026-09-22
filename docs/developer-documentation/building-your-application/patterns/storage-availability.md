@@ -45,8 +45,10 @@ await app.getStorageEstimate()       // fresh snapshot incl. per-subsystem bytes
 await app.requestPersistence()       // ask the browser to protect storage -> boolean
 await app.getPersistenceStatus()     // 'persisted' | 'prompt' | 'never'
 app.storageDatabases()               // names of the IndexedDB databases RADFish owns
-app.on("storage:pressure", handler)  // fires when browser whole-origin usage crosses warnAt/criticalAt
+app.on("storage:pressure", handler)  // fires when `level` enters/moves within warning|critical
+app.on("storage:ok", handler)        // fires when `level` returns to "ok"
 app.off("storage:pressure", handler)
+app.off("storage:ok", handler)
 ```
 
 Reading the per-subsystem numbers is a one-liner — no hook or extra setup:
@@ -73,6 +75,7 @@ console.log(s.storesBytes, s.logsBytes, s.radfishBytes, s.usageBytes);
 | `radfishBytes` | `logsBytes + storesBytes` — total storage RADFish manages (logger + Stores). |
 | `usageDetails` | Chromium-only per-system breakdown (`indexedDB`, `caches`, …); `null` elsewhere. |
 | `databases` | Names of the IndexedDB databases RADFish owns. |
+| `simulated` | Present (and `true`) only when `simulateQuota()` is active — see Caveats. Absent on real readings. |
 
 The **per-subsystem numbers** (`logsBytes`, `stores`/`storesBytes`, `radfishBytes`) are measured by RADFish itself — it reads each database and sums the serialized size of the records — because the browser provides no per-database byte breakdown cross-browser (only Chromium's `usageDetails`, and only lumped by storage *system*, not per database). This means they work on **every** browser, but the Store measurement reads all records on demand, so treat it as an occasional call, not a tight-loop one.
 
@@ -81,6 +84,8 @@ The **per-subsystem numbers** (`logsBytes`, `stores`/`storesBytes`, `radfishByte
 :::note What `level` / `storage:pressure` watch
 
 The `warnAt` / `criticalAt` thresholds (and the `level` field and `storage:pressure` event) are compared against the **browser whole-origin** usage — `percentUsed = usageBytes / quotaBytes` — because the browser quota is the real ceiling that causes `QuotaExceededError` and eviction. They are **not** tied to `radfishBytes`, `storesBytes`, or `logsBytes`; those are informational numbers with no threshold attached.
+
+`storage:pressure` and its counterpart `storage:ok` fire only when `level` **changes** (not on every reading): `storage:pressure` when it enters or moves within `warning`/`critical`, and `storage:ok` when it returns to `ok`. Subscribe to **both** if you want a UI that can raise *and* clear a pressure banner.
 
 One consequence: the browser quota is usually huge (often ~10 GB+), so for text-based data these thresholds rarely trip. If you want a warning tied to *your app's own* usage (e.g. "warn when catch data passes 40 MB"), that's an app-level budget you'd check yourself against `storesBytes` / `radfishBytes` — RADFish doesn't impose one.
 
@@ -102,9 +107,13 @@ function StorageMeter() {
 
   useEffect(() => {
     app.getStorageEstimate().then(setEstimate);        // refresh on mount
-    const onPressure = (e) => setEstimate(e.detail);   // update when it fills up
-    app.on("storage:pressure", onPressure);
-    return () => app.off("storage:pressure", onPressure);
+    const onChange = (e) => setEstimate(e.detail);     // update when level changes
+    app.on("storage:pressure", onChange);              // fills up
+    app.on("storage:ok", onChange);                    // recovers
+    return () => {
+      app.off("storage:pressure", onChange);
+      app.off("storage:ok", onChange);
+    };
   }, [app]);
 
   if (!estimate?.supported) return <p>Storage info unavailable on this browser.</p>;
@@ -120,7 +129,7 @@ function StorageMeter() {
 }
 ```
 
-There is no browser "storage pressure" push event, so the snapshot updates on mount and on `storage:pressure`. If you need live updates while nothing crosses a threshold, re-read `app.getStorageEstimate()` on an interval.
+There is no browser "storage pressure" push event, so the snapshot updates on mount and on the `storage:pressure` / `storage:ok` level-change events. If you need live updates while nothing crosses a threshold, re-read `app.getStorageEstimate()` on an interval.
 
 ## Requesting persistent storage
 
@@ -186,6 +195,7 @@ Even persistent storage isn't an absolute guarantee. Treat local storage as a **
 - **The numbers are approximate.** `quota` is derived from total disk, padded for privacy, and drifts. Treat the estimate as an advisory gauge, not an exact budget — and still handle `QuotaExceededError` on writes.
 - **The browser gives no per-database split** — it reports one origin-wide total. RADFish fills that gap by measuring the logger and each Store *itself* (`logsBytes`, `storesBytes`), so you do get the per-subsystem breakdown; it just comes from RADFish reading the records, not from the browser. The Store measurement reads all records on demand (O(n)), so call it when you need a number, not in a tight loop.
 - **Unsupported browsers degrade gracefully.** When `supported` is `false`, the estimate is unavailable but persistence status may still be readable, and the app keeps working.
+- **Testing storage pressure.** `app.simulateQuota(bytes)` overrides the reported quota so the `warnAt` / `criticalAt` thresholds can be exercised without filling real disk (pass `null` to restore the browser's real quota). Snapshots taken while it's active carry `simulated: true`, and — as the one exception to the rule above — compute `percentUsed` / `level` against `radfishBytes` rather than whole-origin `usageBytes`, so unrelated browser storage doesn't dominate the simulated percentage.
 
 ## Sources
 
