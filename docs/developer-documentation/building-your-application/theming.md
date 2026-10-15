@@ -22,7 +22,7 @@ Copy the `themes/` directory from the [RADFish template](https://github.com/nmfs
 ```
 your-project/
 ├── themes/
-│   └── noaa-theme/
+│   └── noaa-fisheries-theme/
 │       ├── assets/
 │       │   ├── logo.png
 │       │   ├── favicon.ico
@@ -47,7 +47,7 @@ export default defineConfig(() => {
     plugins: [
       react(),
       radFishThemePlugin({
-        theme: "noaa-theme",
+        theme: "noaa-fisheries-theme",
         name: "My App Name",
         shortName: "MyApp",
         description: "App description for PWA",
@@ -91,8 +91,8 @@ Theme customization is split across two files:
 
 | File | Purpose |
 |------|---------|
-| `themes/noaa-theme/styles/uswds-config.scss` | USWDS token variable overrides (colors, spacing) |
-| `themes/noaa-theme/styles/theme.scss` | CSS custom properties and component overrides |
+| `themes/noaa-fisheries-theme/styles/uswds-config.scss` | USWDS token variable overrides (colors, spacing) |
+| `themes/noaa-fisheries-theme/styles/theme.scss` | CSS custom properties and component overrides |
 
 After editing either file, save it. The dev server detects changes and automatically recompiles.
 
@@ -110,7 +110,7 @@ The RADFish theme plugin (`vite-plugin-radfish-theme`) runs at build time and du
 ### Directory Structure
 
 ```
-themes/noaa-theme/
+themes/noaa-fisheries-theme/
 ├── assets/                    # Icons and logos
 │   ├── logo.png              # Header logo
 │   ├── favicon.ico           # Browser favicon
@@ -119,7 +119,7 @@ themes/noaa-theme/
     ├── uswds-config.scss     # USWDS token variable overrides
     └── theme.scss            # CSS custom properties + component overrides
 
-node_modules/.cache/radfish-theme/noaa-theme/   # Auto-generated (don't edit)
+node_modules/.cache/radfish-theme/noaa-fisheries-theme/   # Auto-generated (don't edit)
 ├── _uswds-entry.scss         # Generated USWDS config
 ├── uswds-precompiled.css     # Compiled USWDS styles
 ├── theme.css                 # Compiled theme overrides
@@ -139,7 +139,7 @@ Styles are loaded in this order, ensuring correct CSS cascade:
 In `uswds-config.scss`, define SCSS variables that configure the USWDS design system. These variables use the USWDS naming convention (`$theme-color-*`) and are passed to USWDS via `@use "uswds-core"`. They don't produce CSS output directly -- they configure the design system's color palette.
 
 ```scss
-// themes/noaa-theme/styles/uswds-config.scss
+// themes/noaa-fisheries-theme/styles/uswds-config.scss
 
 // Primary colors
 $theme-color-primary: #0055a4;
@@ -182,7 +182,7 @@ See [USWDS Color Theme Tokens](https://designsystem.digital.gov/design-tokens/co
 In `theme.scss`, add a `:root` block with CSS custom properties for agency-specific colors that go beyond what USWDS provides:
 
 ```scss
-// themes/noaa-theme/styles/theme.scss
+// themes/noaa-fisheries-theme/styles/theme.scss
 
 :root {
   // Brand colors
@@ -232,7 +232,7 @@ Every USWDS token you define in `uswds-config.scss` gets a corresponding `--radf
 In the component overrides section of `theme.scss`, add custom CSS to override USWDS and RADFish component styles. You can reference both your custom properties and the auto-generated `--radfish-color-*` variables:
 
 ```scss
-// themes/noaa-theme/styles/theme.scss
+// themes/noaa-fisheries-theme/styles/theme.scss
 
 /* Header background */
 header.usa-header {
@@ -303,7 +303,7 @@ In `vite.config.js`, configure the app name and description via the plugin optio
 import { radFishThemePlugin } from "@nmfs-ocio/vite-plugin-radfish-theme";
 
 radFishThemePlugin({
-  theme: "noaa-theme",
+  theme: "noaa-fisheries-theme",
   name: "My App Name",
   shortName: "MyApp",
   description: "App description for PWA",
@@ -339,7 +339,7 @@ Example usage in a component:
 
 ## Changing Assets
 
-Replace files in `themes/noaa-theme/assets/` to customize branding. Keep the same filenames:
+Replace files in `themes/noaa-fisheries-theme/assets/` to customize branding. Keep the same filenames:
 
 | File | Purpose | Recommended Size |
 |------|---------|------------------|
@@ -363,8 +363,8 @@ In development, assets are served from the theme directory. On build, they are c
 3. Copy and customize the theme files:
 
    ```bash
-   cp themes/noaa-theme/styles/uswds-config.scss themes/my-agency/styles/
-   cp themes/noaa-theme/styles/theme.scss themes/my-agency/styles/
+   cp themes/noaa-fisheries-theme/styles/uswds-config.scss themes/my-agency/styles/
+   cp themes/noaa-fisheries-theme/styles/theme.scss themes/my-agency/styles/
    ```
 
 4. Edit `themes/my-agency/styles/uswds-config.scss` with your agency's USWDS color tokens.
