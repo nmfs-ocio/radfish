@@ -46,9 +46,6 @@
   "overrides": {
     "@cmfcmf/docusaurus-search-local": {
       "@docusaurus/core": "^3.8.0"
-    },
-    "docusaurus-plugin-remote-content": {
-      "@docusaurus/core": "^3.8.0"
     }
   }
 }
