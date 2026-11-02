@@ -56,6 +56,19 @@ The GitHub Package Registry requires additional setup:
 
    A `E401` error indicates your PAT is missing or invalid.
 
+:::warning Token Expiration
+
+PATs expire after the period you choose when creating them (for example, 90 days). Once your token expires, installing `@nmfs-ocio` packages will fail with an error like:
+
+```text
+npm error code E401
+npm error 401 Unauthorized - GET https://npm.pkg.github.com/@nmfs-ocio%2fradfish - unauthenticated: User cannot be authenticated with the token provided.
+```
+
+To fix it, generate a new token (step 1) and update your `.npmrc` with it (step 2). See the [FAQ](./faq.md#token-expired) for details.
+
+:::
+
 </TabItem>
 <TabItem value="npm" label="npm">
 
