@@ -210,9 +210,7 @@ jobs:
           gcloud storage objects update "$DEST/manifest.json" --content-type="application/manifest+json"
 ```
 
-A storage bucket on its own can't serve HTTPS on a custom domain or return `index.html` with status 200 for app routes. A service in front of the bucket, such as a Google Cloud HTTPS load balancer, must handle both.
-
-{/* TODO: Add the load balancer setup: how HTTPS is configured, how app routes are sent to index.html, which paths are passed through to the bucket, and what Google Cloud access a new app team needs and who to ask. */}
+A storage bucket on its own can't serve HTTPS on a custom domain or return `index.html` with status 200 for app routes. A service in front of the bucket, such as a Google Cloud HTTPS load balancer, must handle both. See [Google Cloud: Host a static website](https://cloud.google.com/storage/docs/hosting-static-website).
 
 ## Troubleshooting
 
