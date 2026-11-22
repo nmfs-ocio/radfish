@@ -3,7 +3,7 @@
 <details>
   <summary>🏳️ Haven't completed the previous lesson?</summary>
 
-  No worries! You can pickup from here:
+  No worries! You can pick up from here:
 
   ```bash
   git stash --include-untracked   # set aside any changes you've made
@@ -11,6 +11,8 @@
   git checkout tags/v2/lesson-3
   npm install
   ```
+
+  Git will say you're in "detached HEAD" state. That's expected. Your earlier changes are saved: run `git stash pop` if you want them back.
 </details>
 
 In this lesson, we'll enhance the "Start Trip" form to save the initial trip details (date, start time, start weather) to offline storage using IndexedDB via RADFish. We'll also navigate the user to the next step in the form process, the "Catch Log" page.

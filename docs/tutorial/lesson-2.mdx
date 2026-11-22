@@ -3,7 +3,7 @@
 <details>
   <summary>🏳️ Haven't completed the previous lesson?</summary>
 
-  No worries! You can pickup from here:
+  No worries! You can pick up from here:
 
   ```bash
   git stash --include-untracked   # set aside any changes you've made
@@ -11,6 +11,8 @@
   git checkout tags/v2/lesson-2
   npm install
   ```
+
+  Git will say you're in "detached HEAD" state. That's expected. Your earlier changes are saved: run `git stash pop` if you want them back.
 </details>
 
 This lesson focuses on building the first step of the trip logging form, the "Start Trip" page. We'll use components from the U.S. Web Design System (USWDS) library (`@trussworks/react-uswds`) to add inputs for the trip date, start time, and start weather.
