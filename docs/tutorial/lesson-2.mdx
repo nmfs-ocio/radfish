@@ -6,7 +6,10 @@
   No worries! You can pickup from here:
 
   ```bash
-  git checkout tags/lesson-2
+  git stash --include-untracked   # set aside any changes you've made
+  git fetch --tags
+  git checkout tags/v2/lesson-2
+  npm install
   ```
 </details>
 
