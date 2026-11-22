@@ -11,6 +11,7 @@ Before you start, make sure you have the following installed:
 - **Node.js** (v22.11.0 or later)
 - **npm** (v10.9.0 or later)
 - **git** (v2.0 or later)
+- A **GitHub account**, used to create a personal access token for installing RADFish packages from GitHub Packages
 
 You can verify your installations by running these commands in your terminal:
 
@@ -25,18 +26,20 @@ git --version
 Clone the repository to your local machine and navigate to the project directory:
 
 ```bash
-git clone https://github.com/nmfs-ocio/learn-radfish.git
-cd learn-radfish
+git clone https://github.com/nmfs-ocio/radfish-learning-module.git
+cd radfish-learning-module
 ```
 
 Now let's build the application and serve it locally to see its current state.
 
-1. **Install Dependencies:** Open your terminal in the project root directory and run:
+1. **Set Up GitHub Packages Access:** RADFish packages are published to GitHub Packages, which requires a personal access token to install. If you haven't set one up yet, follow the GitHub Packages steps in [Getting Started](/developer-documentation/getting-started). Getting Started suggests the `write:packages` scope, but for this tutorial a token with only `read:packages` is enough.
+
+2. **Install Dependencies:** Open your terminal in the project root directory and run:
    ```bash
    npm install
    ```
 
-2. **Start the Development Server:** Run the following command to start the application:
+3. **Start the Development Server:** Run the following command to start the application:
    ```bash
    npm run start
    ```

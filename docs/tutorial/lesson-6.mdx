@@ -3,11 +3,16 @@
 <details>
   <summary>🏳️ Haven't completed the previous lesson?</summary>
 
-  No worries! You can pickup from here:
+  No worries! You can pick up from here:
 
   ```bash
-  git checkout tags/lesson-6
+  git stash --include-untracked   # set aside any changes you've made
+  git fetch --tags
+  git checkout tags/v2/lesson-6
+  npm install
   ```
+
+  Git will say you're in "detached HEAD" state. That's expected. Your earlier changes are saved: run `git stash pop` if you want them back.
 </details>
 
 In this lesson, we will build a review page that fetches trip and catch data from RADFish stores, aggregates catch statistics by species, and displays the results using the RADFish Table component. We'll also implement offline detection using the `useOfflineStatus` hook to provide dynamic UI feedback based on network connectivity.

@@ -3,11 +3,16 @@
 <details>
   <summary>🏳️ Haven't completed the previous lesson?</summary>
 
-  No worries! You can pickup from here:
+  No worries! You can pick up from here:
 
   ```bash
-  git checkout tags/lesson-7
+  git stash --include-untracked   # set aside any changes you've made
+  git fetch --tags
+  git checkout tags/v2/lesson-7
+  npm install
   ```
+
+  Git will say you're in "detached HEAD" state. That's expected. Your earlier changes are saved: run `git stash pop` if you want them back.
 </details>
 
 In this lesson, we'll enhance the submission process to handle both offline storage and online server submission. We'll set up a JSON server to simulate a backend API and modify our Review page to automatically submit data to the server when online, while gracefully falling back to local storage when offline.
